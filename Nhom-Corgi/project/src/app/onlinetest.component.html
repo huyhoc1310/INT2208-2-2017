@@ -1,4 +1,4 @@
-<div class="col-md-9">
+<!-- <div class="col-md-9">
   <h2>Đề hóa 2016 khối A</h2>
   <h3>Hãy chọn giá đúng</h3>
   <hr>
@@ -20,3 +20,33 @@
   <button class="btn btn-md btn-success" (click)="check()">Check answer </button>
   <br><br>
 </div>
+-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngFor="let question of questions">
+        <ul class="breadcrumb">
+          <h4>{{ question.question }}</h4>
+          <br>
+          <div *ngFor="let option of question.answer">
+            <div>
+              <label>
+        <input class="answer" type="radio" name="{{question.id}}" (click)="saveStatus(question, option.valueK)"> {{option.text}}
+        </label>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<br>
+<h2 class="text-center">
+  <a class="btn btn-lg btn-primary" role="button" (click)="check()">NỘP BÀI</a>
+</h2>
+<h2 class="test-center" *ngIf="show">Số câu đúng: {{correct}}</h2>
+<p></p>
+<br>
+<br>
+<br>
