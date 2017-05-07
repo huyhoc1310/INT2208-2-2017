@@ -19,7 +19,8 @@
  * HTML & CSS
  * Bootstrap
  * Jquery
- * Ruby on rails
+ * Angular 2
+ * ExpressJS
 
 ### Use case
 ![Image of Usecase](https://github.com/huyhoc1310/INT2208-2-2017/blob/master/Nhom-Corgi/usecase.png)
