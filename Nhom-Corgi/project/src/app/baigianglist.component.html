@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="breadcrumb">
+        <li>
+          <a href="#">Trang chủ</a>
+        </li>
+        <li>
+          <a href="#">Bài giảng</a>
+        </li>
+        <li>
+          <a href="#">Toán học</a>
+        </li>
+        <li>
+          <a href="#">Chương 1: Hàm số</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="breadcrumb">
+        <h4 class="text-primary">BÀI 1: Tính đơn điệu của hàm số</h4>
+      </ul>
+    </div>
+  </div>
+</div>
+<br>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <ul class="list-group" *ngFor="let bg of baigiang">
+          <li class="list-group-item">
+            <a [routerLink]="['/bglist',bg.id]"> {{bg.name}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://drive.google.com/file/d/0B7AbXBj6Zj-IZE9TYngtVXlqeWs/preview?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;0&quot;"
+            allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Tài liệu tải về</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="media-list">
+              <li class="media">
+                <a class="pull-left" href="https://drive.google.com/file/d/0B4CBOwtU17hEam1FdWo3QkZoOXM/view?usp=sharing"><img class="media-object" src="https://image.flaticon.com/icons/svg/136/136522.svg" height="64" width="64"></a>
+                <div class="media-body">
+                  <h3 class="media-heading">Bài tập tự luyện</h3>
+                  <p></p>
+                </div>
+              </li>
+              <li class="media">
+                <a class="pull-left" href="https://drive.google.com/file/d/0B4CBOwtU17hEam1FdWo3QkZoOXM/view?usp=sharing"><img class="media-object" src="https://image.flaticon.com/icons/svg/136/136522.svg" height="64" width="64"></a>
+                <div class="media-body">
+                  <h3 class="media-heading">Đáp án bài tập tự luyện</h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
