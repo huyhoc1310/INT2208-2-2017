@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { BaigiangService } from "./services/baigiang.service"
+import { BaigiangService } from "./services/baigiang.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Subscription } from 'rxjs';
 import { Pipe, PipeTransform } from '@angular/core';

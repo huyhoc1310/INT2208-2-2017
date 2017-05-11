@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import {LoginService} from './services/login.service';
+import { CheckLoginGuard } from "./guards/check-login.guard";
 
 @Component({
     selector: 'login-component',
-    templateUrl: './login.component.html'
+    templateUrl: './login.component.html',
+    providers:[LoginService, CheckLoginGuard],
+    
 })
 export class LoginComponent {
     constructor(private router: Router, private loginService: LoginService){

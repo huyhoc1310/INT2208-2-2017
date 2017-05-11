@@ -31,7 +31,7 @@
           <div *ngFor="let option of question.answer">
             <div>
               <label>
-        <input class="answer" type="radio" name="{{question.id}}" (click)="saveStatus(question, option.valueK)"> {{option.text}}
+        <input class="answer" type="radio" name="{{question.id}}" (click)="saveStatus(question, option.value)"> {{option.text}}
         </label>
             </div>
           </div>
