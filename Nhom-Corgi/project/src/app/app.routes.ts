@@ -1,16 +1,15 @@
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { OnlineTestComponent } from './onlinetest.component';
-import { LoginComponent } from './login.component';
+
 import { BaigiangComponent } from './baigiang.component';
 import { BaigiangListComponent } from './baigianglist.component';
-import { CheckLoginGuard } from './guards/check-login.guard';
+
 
 const routing: Routes = [
     { path: '', component: HomeComponent},
     { path: 'onlinetest', component: OnlineTestComponent},
-    { path: 'log', component: LoginComponent},
-    { path: 'bglist/:id', component: BaigiangComponent, canActivate:[CheckLoginGuard] },
-    { path: 'baigiang', component: BaigiangListComponent, canActivate:[CheckLoginGuard] }
+    { path: 'bglist/:id', component: BaigiangComponent },
+    { path: 'baigiang', component: BaigiangListComponent }
 ]
 export const appRoutes = RouterModule.forRoot(routing);

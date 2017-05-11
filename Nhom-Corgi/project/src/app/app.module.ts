@@ -8,18 +8,18 @@ import { HomeComponent } from './home.component';
 import { OnlineTestComponent } from './onlinetest.component';
 import {appRoutes} from './app.routes';
 import { BaigiangListComponent } from "./baigianglist.component";
-import { LoginComponent } from "./login.component";
+
 import { BaigiangComponent, SafePipe } from "./baigiang.component";
 import { VideoListComponent } from "./videolist.component";
-import {LoginService} from './services/login.service';
-import {CheckLoginGuard} from './guards/check-login.guard';
+
+
 import {BaigiangService} from './services/baigiang.service';
 @NgModule({
   declarations: [
     AppComponent,
     OnlineTestComponent,
     HomeComponent,
-    LoginComponent,
+
     BaigiangListComponent,
     BaigiangComponent,
     VideoListComponent,
@@ -31,7 +31,7 @@ import {BaigiangService} from './services/baigiang.service';
     HttpModule,
     appRoutes
   ],
-  providers: [ BaigiangService,LoginService, CheckLoginGuard],
+  providers: [ BaigiangService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from './services/login.service';
+
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
@@ -7,17 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
+  }
   public isLoggedin: boolean;
-  constructor(private loginService: LoginService, private router: Router){
+  constructor(private router: Router){
 
   }
-  ngOnInit(){
-    this.isLoggedin = this.loginService.IsLogged();
-  }
-  Logout(){
-    this.loginService.SetLogin(false);
-    //alert('Logged out');
-    this.router.navigate(['/']);
 
-  }
 }
