@@ -9,18 +9,16 @@ import { Router, ActivatedRoute } from "@angular/router";
 })
 
 export class BaigiangListComponent implements OnInit {
-      public baigiang: any[];
+    public baigiang: any[];
     constructor(private baigiangService: BaigiangService) {
 
     }
     ngOnInit() {
-       this.baigiangService.GetList().subscribe((response: any) => {
+        this.baigiangService.GetList().subscribe((response: any) => {
             this.baigiang = response;
             console.log(response);
-    });
-  
-
-}
+        });
+    }
 }
 
 

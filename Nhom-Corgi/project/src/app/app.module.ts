@@ -11,6 +11,9 @@ import { BaigiangListComponent } from "./baigianglist.component";
 import { LoginComponent } from "./login.component";
 import { BaigiangComponent, SafePipe } from "./baigiang.component";
 import { VideoListComponent } from "./videolist.component";
+import {LoginService} from './services/login.service';
+import {CheckLoginGuard} from './guards/check-login.guard';
+import {BaigiangService} from './services/baigiang.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,7 @@ import { VideoListComponent } from "./videolist.component";
     HttpModule,
     appRoutes
   ],
-  providers: [],
+  providers: [ BaigiangService,LoginService, CheckLoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

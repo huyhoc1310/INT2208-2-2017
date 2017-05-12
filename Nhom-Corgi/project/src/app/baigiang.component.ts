@@ -3,15 +3,15 @@ import { BaigiangService } from "./services/baigiang.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Subscription } from 'rxjs';
 import { Pipe, PipeTransform } from '@angular/core';
-import { DomSanitizer} from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Pipe({ name: 'safe' })
 export class SafePipe implements PipeTransform {
-  constructor(private sanitizer: DomSanitizer) {}
-  transform(url) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  }
-} 
+	constructor(private sanitizer: DomSanitizer) { }
+	transform(url) {
+		return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+	}
+}
 @Component({
 	selector: 'video-app',
 	templateUrl: './baigiang.component.html',
@@ -24,7 +24,7 @@ export class BaigiangComponent implements OnInit, OnDestroy {
 	public bg: any;
 	constructor(private router: Router, private activatedRoute: ActivatedRoute, public baigiangService: BaigiangService) {
 
-}
+	}
 	ngOnInit() {
 		this.subscription = this.activatedRoute.params.subscribe(params => {
 			this._id = params['id'];
