@@ -11,7 +11,7 @@ import { BaigiangListComponent } from "./baigianglist.component";
 
 import { BaigiangComponent, SafePipe } from "./baigiang.component";
 import { VideoListComponent } from "./videolist.component";
-
+import{ BaigiangtoanComponent} from './baigiangtoan.component';
 
 import {BaigiangService} from './services/baigiang.service';
 @NgModule({
@@ -19,7 +19,7 @@ import {BaigiangService} from './services/baigiang.service';
     AppComponent,
     OnlineTestComponent,
     HomeComponent,
-
+    BaigiangtoanComponent,
     BaigiangListComponent,
     BaigiangComponent,
     VideoListComponent,
