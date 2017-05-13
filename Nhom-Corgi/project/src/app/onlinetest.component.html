@@ -1,32 +1,13 @@
-<!-- <div class="col-md-9">
-  <h2>Đề hóa 2016 khối A</h2>
-  <h3>Hãy chọn giá đúng</h3>
-  <hr>
-  <div *ngFor=" let question of questions">
-    <h4><span *ngIf="question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
-      <span *ngIf="question.status && question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red"></span>      {{question.question}}
-    </h4>
-    <div *ngIf="question.status && question.status!='Right'">
-      <p style="color:red"> {{question.status}}</p>
-    </div>
-    <div *ngFor="let option of question.answer">
-      <div>
-        <input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}"> {{option.text}}
-      </div>
-    </div>
-
-  </div>
-  <h4>Correct Answer: <b>{{ countCorrectAnswer}}</b></h4>
-  <button class="btn btn-md btn-success" (click)="check()">Check answer </button>
-  <br><br>
-</div>
--->
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <div *ngFor="let question of questions">
         <ul class="breadcrumb">
-          <h4>{{ question.question }}</h4>
+          <h4><span *ngIf="question.status=='correct'" class="glyphicon glyphicon-ok" style="color: green"></span>
+            <span *ngIf="question.status && question.status!='correct'" class="glyphicon glyphicon-remove" style="color:red"></span>            {{ question.question }}</h4>
+          <div *ngIf="question.status && question.status!='correct'">
+            <p style="color:red"> {{question.status}}</p>
+          </div>
           <br>
           <div *ngFor="let option of question.answer">
             <div>
@@ -45,7 +26,7 @@
 <h2 class="text-center">
   <a class="btn btn-lg btn-primary" role="button" (click)="check()">NỘP BÀI</a>
 </h2>
-<h2 class="test-center" *ngIf="show">Số câu đúng: {{correct}}</h2>
+<h2 class="test-center" *ngIf="show">Số câu correct: {{correct}}</h2>
 <p></p>
 <br>
 <br>
