@@ -6,13 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  ngOnInit(): void {
-    throw new Error("Method not implemented.");
-  }
-  public isLoggedin: boolean;
-  constructor(private router: Router){
+export class AppComponent {
 
-  }
 
 }
