@@ -4,7 +4,7 @@ import{Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 @Injectable()
 export class ListbaigiangService {
-    private apiUrl="httpa://590f828127cbd50011191491.mockapi.io/api/dsbaigiang/";
+    private apiUrl="https://590f828127cbd50011191491.mockapi.io/api/dsbaigiang/";
     constructor(private _http: Http){
 
     }
