@@ -5,9 +5,7 @@
         <ul class="breadcrumb">
           <h4><span *ngIf="question.status=='correct'" class="glyphicon glyphicon-ok" style="color: green"></span>
             <span *ngIf="question.status && question.status!='correct'" class="glyphicon glyphicon-remove" style="color:red"></span>            {{ question.question }}</h4>
-          <div *ngIf="question.status && question.status!='correct'">
-            <p style="color:red"> {{question.status}}</p>
-          </div>
+      
           <br>
           <div *ngFor="let option of question.answer">
             <div>
@@ -26,7 +24,7 @@
 <h2 class="text-center">
   <a class="btn btn-lg btn-primary" role="button" (click)="check()">NỘP BÀI</a>
 </h2>
-<h2 class="test-center" *ngIf="show">Số câu correct: {{correct}}</h2>
+<h1 class="text-center" *ngIf="show">Số câu đúng: {{correct}}</h2>
 <p></p>
 <br>
 <br>
