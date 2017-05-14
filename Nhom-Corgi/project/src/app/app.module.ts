@@ -14,6 +14,7 @@ import { VideoListComponent } from "./videolist.component";
 import{ BaigiangtoanComponent} from './baigiangtoan.component';
 
 import {BaigiangService} from './services/baigiang.service';
+import {ListbaigiangService} from './services/listbaigiang.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,7 @@ import {BaigiangService} from './services/baigiang.service';
     HttpModule,
     appRoutes
   ],
-  providers: [ BaigiangService],
+  providers: [ BaigiangService, ListbaigiangService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
