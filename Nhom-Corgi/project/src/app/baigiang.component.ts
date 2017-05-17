@@ -22,6 +22,7 @@ export class BaigiangComponent implements OnInit, OnDestroy {
 	public _id: number;
 	public subscription: Subscription;
 	public bg: any;
+	
 	constructor(private router: Router, private activatedRoute: ActivatedRoute, public baigiangService: BaigiangService) {
 
 	}
